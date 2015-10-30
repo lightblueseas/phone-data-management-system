@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>de.alpharogroup</groupId>
+		<artifactId>mvn-persistence-parent</artifactId>
+		<version>2.2.0</version>
+		<relativePath></relativePath>
+	</parent>
+
+	<artifactId>phone-data-management-system</artifactId>
+	<packaging>pom</packaging>
+	<version>3.1.0</version>
+	<inceptionYear>2015</inceptionYear>
+
+	<name>${project.artifactId}</name>
+
+	<description>
+		Parent project that holds module projects for the persistence of address data.
+	</description>
+
+	<url>https://github.com/lightblueseas/phone-data-management-system</url>
+
+	<scm>
+		<connection>scm:git:git:@github.com:lightblueseas/phone-data-management-system.git</connection>
+		<developerConnection>scm:git:git@github.com:lightblueseas/phone-data-management-system.git</developerConnection>
+		<url>git:@github.com:lightblueseas/phone-data-management-system.git</url>
+	</scm>
+
+	<ciManagement>
+		<system>travis-ci</system>
+		<url>https://travis-ci.org/lightblueseas/phone-data-management-system</url>
+	</ciManagement>
+
+	<issueManagement>
+		<system>github</system>
+		<url>https://github.com/lightblueseas/phone-data-management-system/issues</url>
+	</issueManagement>
+	
+	<modules>
+		<module>phone-data-management-system-entities</module>
+		<module>phone-data-management-system-business</module>
+		<module>phone-data-management-system-init</module>
+	</modules>
+	
+	<properties>
+	</properties>	
+	
+	<dependencyManagement>
+
+		<dependencies>
+			<!-- PROJECT-DATA DEPENDENCIES -->
+			<dependency>
+				<groupId>de.alpharogroup</groupId>
+				<artifactId>phone-data-management-system-entities</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>de.alpharogroup</groupId>
+				<artifactId>phone-data-management-system-business</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+		</dependencies>
+
+	</dependencyManagement>
+
+	<dependencies>
+		<!-- LOMBOK DEPENDENCIES -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+
+	</dependencies>
+	
+</project>
