@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>de.alpharogroup</groupId>
 		<artifactId>mvn-persistence-parent</artifactId>
-		<version>2.2.0</version>
+		<version>2.15.0</version>
 		<relativePath></relativePath>
 	</parent>
 
@@ -45,6 +45,8 @@
 	</modules>
 	
 	<properties>
+		<!-- RESOURCEBUNDLE-CORE versions -->		
+		<resourcebundle-inspector.version>2.6.0</resourcebundle-inspector.version>
 	</properties>	
 	
 	<dependencyManagement>
@@ -62,18 +64,15 @@
 				<artifactId>phone-data-management-system-business</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<!-- RESOURCEBUNDLE-CORE DEPENDENCIES -->
+			<dependency>
+				<groupId>de.alpharogroup</groupId>
+				<artifactId>resourcebundle-inspector</artifactId>
+				<version>${resourcebundle-inspector.version}</version>
+			</dependency>
 
 		</dependencies>
 
 	</dependencyManagement>
-
-	<dependencies>
-		<!-- LOMBOK DEPENDENCIES -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-		</dependency>
-
-	</dependencies>
 	
 </project>
