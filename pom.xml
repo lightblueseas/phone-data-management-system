@@ -42,6 +42,10 @@
 		<module>phone-data-management-system-entities</module>
 		<module>phone-data-management-system-business</module>
 		<module>phone-data-management-system-init</module>
+		<module>phone-data-management-system-domain</module>
+		<module>phone-data-management-system-rest-api</module>
+		<module>phone-data-management-system-rest-client</module>
+		<module>phone-data-management-system-rest-web</module>
 	</modules>
 	
 	<properties>
