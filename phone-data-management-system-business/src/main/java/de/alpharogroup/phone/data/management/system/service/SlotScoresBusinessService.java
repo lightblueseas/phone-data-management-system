@@ -10,27 +10,27 @@ import org.springframework.transaction.annotation.Transactional;
 
 import de.alpharogroup.collections.ListExtensions;
 import de.alpharogroup.db.service.jpa.AbstractBusinessService;
-import de.alpharogroup.phone.data.management.system.daos.SlotScoreDao;
-import de.alpharogroup.phone.data.management.system.entities.SlotScore;
-import de.alpharogroup.phone.data.management.system.service.api.SlotScoreService;
+import de.alpharogroup.phone.data.management.system.daos.SlotScoresDao;
+import de.alpharogroup.phone.data.management.system.entities.SlotScores;
+import de.alpharogroup.phone.data.management.system.service.api.SlotScoresService;
 import de.alpharogroup.phone.data.management.system.service.util.HqlStringCreator;
 
 
 @Transactional
-@Service("slotScoreService")
-public class SlotScoreBusinessService extends AbstractBusinessService<SlotScore, Integer, SlotScoreDao> implements SlotScoreService  {
+@Service("slotScoresService")
+public class SlotScoresBusinessService extends AbstractBusinessService<SlotScores, Integer, SlotScoresDao> implements SlotScoresService  {
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public SlotScore find(final String phoneNumber){
-		final List<SlotScore> slotScores = find(phoneNumber, null);
+	public SlotScores find(final String phoneNumber){
+		final List<SlotScores> slotScores = find(phoneNumber, null);
 		return ListExtensions.getFirst(slotScores);
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<SlotScore> find(final String phoneNumber, final Integer score) {
+	public List<SlotScores> find(final String phoneNumber, final Integer score) {
 		final String hqlString = HqlStringCreator.forSlotScore(phoneNumber, score);
 		final Query query = getQuery(hqlString);
 		if((phoneNumber != null) && !phoneNumber.isEmpty()){
@@ -39,12 +39,12 @@ public class SlotScoreBusinessService extends AbstractBusinessService<SlotScore,
 		if(score != null){
 			query.setParameter("score", score);
 		}
-		final List<SlotScore> images = query.getResultList();
+		final List<SlotScores> images = query.getResultList();
 		return images;
 	}
 
 	@Autowired
-	public void setProfileRatingsDao(final SlotScoreDao slotScoreDao) {
+	public void setProfileRatingsDao(final SlotScoresDao slotScoreDao) {
 		setDao(slotScoreDao);
 	}
 }

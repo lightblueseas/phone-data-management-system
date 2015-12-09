@@ -1,11 +1,11 @@
 package de.alpharogroup.phone.data.management.system.service.locator;
 
-import de.alpharogroup.phone.data.management.system.service.api.SlotScoreService;
+import de.alpharogroup.phone.data.management.system.service.api.SlotScoresService;
 
 
 public interface ServiceLocator {
 
-	SlotScoreService getSlotScoreService();
+	SlotScoresService getSlotScoreService();
 
-	void setSlotScoreService(final SlotScoreService slotScoreService);
+	void setSlotScoreService(final SlotScoresService slotScoreService);
 }

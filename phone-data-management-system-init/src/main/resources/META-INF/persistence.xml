@@ -6,7 +6,7 @@
 		transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 
-		<class>de.alpharogroup.phone.data.management.system.entities.SlotScore</class>
+		<class>de.alpharogroup.phone.data.management.system.entities.SlotScores</class>
 
         <properties>
 			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />

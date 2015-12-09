@@ -2,15 +2,15 @@ package de.alpharogroup.phone.data.management.system.service.util;
 
 public class HqlStringCreator {
 
-	public static String forSlotScore(String phoneNumber, Integer score){
-		StringBuilder sb = new StringBuilder();
-		sb.append("select ss from SlotScore ss");
-		boolean phoneNumberIsNotNull = phoneNumber != null && !phoneNumber.isEmpty();
+	public static String forSlotScore(final String phoneNumber, final Integer score){
+		final StringBuilder sb = new StringBuilder();
+		sb.append("select ss from SlotScores ss");
+		final boolean phoneNumberIsNotNull = phoneNumber != null && !phoneNumber.isEmpty();
 		if (phoneNumberIsNotNull) {
 			sb.append(" ");
 			sb.append("where ss.phoneNumber=:phoneNumber");
 		}
-		boolean scoreIsNotNull = score != null;
+		final boolean scoreIsNotNull = score != null;
 		if (scoreIsNotNull) {
 			sb.append(" ");
 			if (phoneNumberIsNotNull) {
@@ -19,7 +19,7 @@ public class HqlStringCreator {
 				sb.append("where ss.score=:score");
 			}
 		}
-		return sb.toString();	
+		return sb.toString();
 	}
 
 }

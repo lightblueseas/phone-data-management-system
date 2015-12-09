@@ -6,11 +6,11 @@ import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 
 import de.alpharogroup.db.dao.jpa.JpaEntityManagerDao;
-import de.alpharogroup.phone.data.management.system.entities.SlotScore;
+import de.alpharogroup.phone.data.management.system.entities.SlotScores;
 
 
-@Repository("slotScoreDao")
-public class SlotScoreDao extends JpaEntityManagerDao<SlotScore, Integer> {
+@Repository("slotScoresDao")
+public class SlotScoresDao extends JpaEntityManagerDao<SlotScores, Integer> {
 	/**
 	 * The serialVersionUID.
 	 */

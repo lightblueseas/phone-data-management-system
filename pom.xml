@@ -37,7 +37,7 @@
 		<system>github</system>
 		<url>https://github.com/lightblueseas/phone-data-management-system/issues</url>
 	</issueManagement>
-	
+
 	<modules>
 		<module>phone-data-management-system-entities</module>
 		<module>phone-data-management-system-business</module>
@@ -47,12 +47,12 @@
 		<module>phone-data-management-system-rest-client</module>
 		<module>phone-data-management-system-rest-web</module>
 	</modules>
-	
+
 	<properties>
-		<!-- RESOURCEBUNDLE-CORE versions -->		
-		<resourcebundle-inspector.version>2.6.0</resourcebundle-inspector.version>
-	</properties>	
-	
+		<!-- RESOURCEBUNDLE-CORE versions -->
+		<resourcebundle-inspector.version>2.7.0</resourcebundle-inspector.version>
+	</properties>
+
 	<dependencyManagement>
 
 		<dependencies>
@@ -60,6 +60,12 @@
 			<dependency>
 				<groupId>de.alpharogroup</groupId>
 				<artifactId>phone-data-management-system-entities</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>de.alpharogroup</groupId>
+				<artifactId>phone-data-management-system-domain</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 
@@ -78,5 +84,5 @@
 		</dependencies>
 
 	</dependencyManagement>
-	
+
 </project>

@@ -2,7 +2,7 @@ package de.alpharogroup.phone.data.management.system.factories;
 
 import java.io.Serializable;
 
-import de.alpharogroup.phone.data.management.system.entities.SlotScore;
+import de.alpharogroup.phone.data.management.system.entities.SlotScores;
 
 
 public class PhoneDataManagementFactory implements Serializable
@@ -23,16 +23,16 @@ public class PhoneDataManagementFactory implements Serializable
 		return instance;
 	}
 
-	protected SlotScore getSlotScore(final Integer id, final String phoneNumber,final Integer score) {
-		final SlotScore slotScore = new SlotScore();
+	protected SlotScores newSlotScores(final Integer id, final String phoneNumber,final Integer score) {
+		final SlotScores slotScore = new SlotScores();
 		slotScore.setId(id);
 		slotScore.setPhoneNumber(phoneNumber);
 		slotScore.setScore(score);
 		return slotScore;
 	}
 
-	public SlotScore getSlotScore(final String phoneNumber,final Integer score) {
-		return getSlotScore(null, phoneNumber, score);
+	public SlotScores newSlotScores(final String phoneNumber,final Integer score) {
+		return newSlotScores(null, phoneNumber, score);
 	}
 
 }

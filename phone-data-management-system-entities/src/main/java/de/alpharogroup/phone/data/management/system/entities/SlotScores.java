@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * The Entity class {@link SlotScore} is keeping the information for the phone number of a player
+ * The Entity class {@link SlotScores} is keeping the information for the phone number of a player
  * and the point score of him. This prevents the player to uninstall the game and install it again
  * and get again 1000 points of score. Only the first time when the player installs the game the
  * player can get 1000 points score. Next time he have to buy points from google play.
@@ -20,7 +20,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class SlotScore extends BaseEntity<Integer> implements Cloneable
+public class SlotScores extends BaseEntity<Integer> implements Cloneable
 {
 
 	/** The serial Version UID. */
