@@ -5,7 +5,7 @@ import de.alpharogroup.phone.data.management.system.service.api.SlotScoresServic
 
 public interface ServiceLocator {
 
-	SlotScoresService getSlotScoreService();
+	SlotScoresService getSlotScoresService();
 
-	void setSlotScoreService(final SlotScoresService slotScoreService);
+	void setSlotScoresService(final SlotScoresService slotScoreService);
 }
