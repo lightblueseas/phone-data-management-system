@@ -3,6 +3,8 @@ package de.alpharogroup.phone.data.management.system.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import de.alpharogroup.phone.data.management.system.daos.SlotScoresDao;
 import de.alpharogroup.phone.data.management.system.domain.SlotScore;
@@ -14,6 +16,8 @@ import de.alpharogroup.service.domain.AbstractDomainService;
 import lombok.Getter;
 import lombok.Setter;
 
+@Transactional
+@Service("slotScoreDomainService")
 public class SlotScoreDomainService
 	extends
 		AbstractDomainService<Integer, SlotScore, SlotScores, SlotScoresDao, SlotScoresMapper>
@@ -52,16 +56,16 @@ public class SlotScoreDomainService
 	@Override
 	public SlotScore find(final String phoneNumber)
 	{
-		SlotScores slotScores = slotScoresService.find(phoneNumber);
-		SlotScore slotScore = getMapper().toDomainObject(slotScores);
+		final SlotScores slotScores = slotScoresService.find(phoneNumber);
+		final SlotScore slotScore = getMapper().toDomainObject(slotScores);
 		return slotScore;
 	}
 
 	@Override
 	public List<SlotScore> find(final String phoneNumber, final Integer score)
 	{
-		List<SlotScores> slotScoresEntities = slotScoresService.find(phoneNumber, score);
-		List<SlotScore> slotScoreDomainObjects = getMapper().toDomainObjects(slotScoresEntities);
+		final List<SlotScores> slotScoresEntities = slotScoresService.find(phoneNumber, score);
+		final List<SlotScore> slotScoreDomainObjects = getMapper().toDomainObjects(slotScoresEntities);
 		return slotScoreDomainObjects;
 	}
 
