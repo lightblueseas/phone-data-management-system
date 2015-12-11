@@ -14,7 +14,7 @@ public class InitializeDatabase {
 
 	/**
 	 * The main method.
-	 * 
+	 *
 	 * @param args
 	 *            the arguments
 	 * @throws ClassNotFoundException
@@ -26,7 +26,7 @@ public class InitializeDatabase {
 	 */
 	public static void main(final String[] args) throws ClassNotFoundException,
 			SQLException, IOException {
-		Properties dbProperties = PropertiesExtensions.loadProperties("project.properties");
+		final Properties dbProperties = PropertiesExtensions.loadProperties("jdbc.properties");
 		new DatabaseInitialization(dbProperties).initializeDatabase();
 	}
 
