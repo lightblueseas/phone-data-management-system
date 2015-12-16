@@ -25,6 +25,13 @@ public class SlotScoreDomainService
 		SlotScoreService
 {
 
+	@Transactional
+	@Override
+	public SlotScore create(final SlotScore domainObject)
+	{
+		return super.create(domainObject);
+	}
+
 	/** The {@link SlotScoresService}. */
 	@Autowired
 	@Getter
@@ -52,7 +59,6 @@ public class SlotScoreDomainService
 	public void setSlotScoresMapper(final SlotScoresMapper slotScoresMapper) {
 		setMapper(slotScoresMapper);
 	}
-
 	@Override
 	public SlotScore find(final String phoneNumber)
 	{

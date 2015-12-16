@@ -24,11 +24,14 @@ public class SlotScoresBusinessService extends AbstractBusinessService<SlotScore
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Override
+	@Transactional
 	public SlotScores find(final String phoneNumber){
 		final List<SlotScores> slotScores = find(phoneNumber, null);
 		return ListExtensions.getFirst(slotScores);
 	}
 
+	@Override
 	@SuppressWarnings("unchecked")
 	public List<SlotScores> find(final String phoneNumber, final Integer score) {
 		final String hqlString = HqlStringCreator.forSlotScore(phoneNumber, score);
