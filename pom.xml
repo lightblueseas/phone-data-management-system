@@ -48,11 +48,6 @@
 		<module>phone-data-management-system-rest-web</module>
 	</modules>
 
-	<properties>
-		<!-- RESOURCEBUNDLE-CORE versions -->
-		<resourcebundle-inspector.version>2.7.0</resourcebundle-inspector.version>
-	</properties>
-
 	<dependencyManagement>
 
 		<dependencies>
@@ -79,12 +74,6 @@
 				<groupId>de.alpharogroup</groupId>
 				<artifactId>phone-data-management-system-business</artifactId>
 				<version>${project.version}</version>
-			</dependency>
-			<!-- RESOURCEBUNDLE-CORE DEPENDENCIES -->
-			<dependency>
-				<groupId>de.alpharogroup</groupId>
-				<artifactId>resourcebundle-inspector</artifactId>
-				<version>${resourcebundle-inspector.version}</version>
 			</dependency>
 
 		</dependencies>
