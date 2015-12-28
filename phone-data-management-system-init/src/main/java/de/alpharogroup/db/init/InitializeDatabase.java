@@ -8,19 +8,20 @@ import de.alpharogroup.phone.data.management.system.init.DatabaseInitialization;
 import de.alpharogroup.resourcebundle.properties.PropertiesExtensions;
 
 /**
- * The Class InitializeDbPhoneDataManagement.
+ * The Class {@link InitializeDatabase} initialize the specific database.
  */
 public class InitializeDatabase {
 
 	/**
-	 * The main method.
+	 * The main method to start the initialization process from the specific database.
 	 *
 	 * @param args
-	 *            the arguments
-	 * @throws ClassNotFoundException
-	 *             the class not found exception
+	 *            the arguments of this main method
 	 * @throws SQLException
-	 *             the sQL exception
+	 *             is thrown if a database access error occurs or this method is called on a closed
+	 *             connection
+	 * @throws ClassNotFoundException
+	 *             is thrown if the Class was not found or could not be located.
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
