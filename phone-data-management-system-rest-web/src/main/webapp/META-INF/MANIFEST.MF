@@ -32,5 +32,21 @@ Class-Path: phone-data-management-system-rest-api.jar rest-api-3.9.0.j
  nager-4.3.8.Final.jar hibernate-ehcache-4.3.8.Final.jar ehcache-core-
  2.4.3.jar hibernate-validator-5.1.3.Final.jar validation-api-1.1.0.Fi
  nal.jar classmate-1.0.0.jar cglib-2.2.2.jar asm-3.3.1.jar postgresql-
- 9.2-1003-jdbc4.jar h2-1.4.190.jar jetty-jmx-9.3.0.v20150612.jar
+ 9.2-1003-jdbc4.jar h2-1.4.190.jar jetty-server-9.3.0.v20150612.jar je
+ tty-http-9.3.0.v20150612.jar jetty-util-9.3.0.v20150612.jar jetty-io-
+ 9.3.0.v20150612.jar jetty-webapp-9.3.0.v20150612.jar jetty-xml-9.3.0.
+ v20150612.jar jetty-servlet-9.3.0.v20150612.jar jetty-security-9.3.0.
+ v20150612.jar jetty-jmx-9.3.0.v20150612.jar jetty-deploy-9.3.0.v20150
+ 612.jar jetty-runner-9.3.0.v20150612.jar jetty-plus-9.3.0.v20150612.j
+ ar jetty-jndi-9.3.0.v20150612.jar jetty-annotations-9.3.0.v20150612.j
+ ar asm-5.0.1.jar asm-commons-5.0.1.jar asm-tree-5.0.1.jar jetty-jaas-
+ 9.3.0.v20150612.jar websocket-server-9.3.0.v20150612.jar websocket-co
+ mmon-9.3.0.v20150612.jar websocket-api-9.3.0.v20150612.jar websocket-
+ client-9.3.0.v20150612.jar websocket-servlet-9.3.0.v20150612.jar apac
+ he-jsp-9.3.0.v20150612.jar jetty-schemas-3.1.M0.jar apache-jsp-8.0.20
+ .M0.jar apache-el-8.0.20.M0.jar org.eclipse.jdt.core-3.8.2.v20130121.
+ jar apache-jstl-9.3.0.v20150612.jar taglibs-standard-spec-1.2.1.jar t
+ aglibs-standard-impl-1.2.1.jar jetty-runner-core-3.5.0.jar jetty-runn
+ er-config-3.5.0.jar tomcat-dbcp-7.0.65.jar tomcat-jdbc-7.0.65.jar tom
+ cat-juli-7.0.65.jar
 
