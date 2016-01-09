@@ -73,8 +73,8 @@ public class ApplicationJettyRunner
 		servletContextHandler.addEventListener(new ContextLoaderListener());
 		final Jetty9RunConfiguration configuration = Jetty9RunConfiguration.builder()
 			.servletContextHandler(servletContextHandler)
-			.httpPort(21080)
-			.httpsPort(21443)
+			.httpPort(11080)
+			.httpsPort(11443)
 			.build();
 		final Server server = new Server();
 		Jetty9Runner.runServletContextHandler(server, configuration);
