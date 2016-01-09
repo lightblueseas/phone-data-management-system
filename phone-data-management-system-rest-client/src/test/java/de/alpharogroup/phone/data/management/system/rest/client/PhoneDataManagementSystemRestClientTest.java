@@ -1,5 +1,10 @@
 package de.alpharogroup.phone.data.management.system.rest.client;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
+
 import org.testng.AssertJUnit;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -27,7 +32,7 @@ public class PhoneDataManagementSystemRestClientTest
 	{
 		if (restClient == null)
 		{
-			restClient = new PhoneDataManagementSystemRestClient("http://localhost:21080");
+			restClient = new PhoneDataManagementSystemRestClient("http://localhost:11080");
 			slotScoresResource = restClient.getSlotScoresResource();
 			AssertJUnit.assertNotNull(slotScoresResource);
 		}
@@ -44,9 +49,17 @@ public class PhoneDataManagementSystemRestClientTest
 	{
 	}
 
-	@Test
-	public void testGetSlotScoresResource()
+	@Test(enabled=true)
+	public void testGetSlotScoresResource() throws IOException
 	{
+        // Connect to servlet
+			final URL url = new URL("http://localhost:11080/SlotGame?action=GetScore&pn=%2B49174/1763646");
+			final URLConnection connection = url.openConnection();
+			final InputStream is = connection.getInputStream();
+			final byte[] buffer = new byte[100];
+			final int length = is.read(buffer);
+			final String score = new String(buffer, 0, length);
+			System.out.println(score);
 	}
 
 }
