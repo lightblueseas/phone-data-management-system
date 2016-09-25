@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
-Class-Path: phone-data-management-system-rest-api.jar rest-api-3.11.0.
- jar domain-api-3.11.0.jar data-api-3.11.0.jar hibernate-core-4.3.8.Fi
+Class-Path: phone-data-management-system-rest-api.jar rest-api-3.14.0.
+ jar domain-api-3.14.0.jar data-api-3.14.0.jar hibernate-core-4.3.8.Fi
  nal.jar jboss-logging-3.1.3.GA.jar jboss-logging-annotations-1.2.0.Be
  ta1.jar jboss-transaction-api_1.2_spec-1.0.0.Final.jar dom4j-1.6.1.ja
  r xml-apis-1.4.01.jar hibernate-commons-annotations-4.0.5.Final.jar h
@@ -8,42 +8,42 @@ Class-Path: phone-data-management-system-rest-api.jar rest-api-3.11.0.
  7.7.jar jandex-1.1.0.Final.jar spring-core-4.1.5.RELEASE.jar commons-
  logging-1.2.jar spring-orm-4.1.5.RELEASE.jar spring-beans-4.1.5.RELEA
  SE.jar spring-jdbc-4.1.5.RELEASE.jar spring-tx-4.1.5.RELEASE.jar jcom
- mons-lang-4.8.0.jar commons-beanutils-1.9.2.jar commons-collections-3
- .2.1.jar commons-collections4-4.1.jar commons-io-2.4.jar velocity-1.7
- .jar commons-lang-2.4.jar commons-codec-1.10.jar joda-time-2.7.jar si
- lly-collections-4.8.0.jar lombok-1.16.8.jar slf4j-log4j12-1.6.4.jar s
- lf4j-api-1.6.4.jar log4j-1.2.16.jar xml-extensions-4.8.0.jar xercesIm
- pl-2.11.0.jar xmlbeans-2.6.0.jar stax-api-1.0.1.jar jettison-1.3.7.ja
- r xstream-1.4.8.jar xmlpull-1.1.3.1.jar xpp3_min-1.1.4c.jar jackson-d
- atabind-2.7.5.jar jackson-annotations-2.7.0.jar jackson-core-2.7.5.ja
- r file-worker-4.8.0.jar poi-3.13.jar poi-ooxml-3.13.jar poi-ooxml-sch
- emas-3.13.jar zip4j-1.3.2.jar dozer-5.5.1.jar commons-lang3-3.4.jar j
- cl-over-slf4j-1.7.5.jar javax.ws.rs-api-2.0.1.jar phone-data-manageme
- nt-system-domain.jar phone-data-management-system-entities.jar spring
- -context-4.1.5.RELEASE.jar spring-aop-4.1.5.RELEASE.jar aopalliance-1
- .0.jar spring-expression-4.1.5.RELEASE.jar phone-data-management-syst
- em-business.jar business-api-3.11.0.jar resourcebundle-inspector-2.7.
- 0.jar test-objects-4.8.0.jar nv-i18n-1.11.jar javax.servlet-api-3.1.0
- .jar spring-web-4.1.5.RELEASE.jar cxf-rt-frontend-jaxrs-3.1.6.jar cxf
- -core-3.1.6.jar woodstox-core-asl-4.4.1.jar stax2-api-3.1.4.jar xmlsc
- hema-core-2.2.1.jar javax.annotation-api-1.2.jar cxf-rt-transports-ht
- tp-3.1.6.jar jackson-jaxrs-json-provider-2.7.5.jar jackson-jaxrs-base
- -2.7.5.jar jackson-module-jaxb-annotations-2.7.5.jar hibernate-entity
- manager-4.3.8.Final.jar hibernate-ehcache-4.3.8.Final.jar ehcache-cor
- e-2.4.3.jar hibernate-validator-5.1.3.Final.jar validation-api-1.1.0.
- Final.jar classmate-1.0.0.jar cglib-2.2.2.jar asm-3.3.1.jar postgresq
- l-9.2-1003-jdbc4.jar h2-1.4.190.jar jetty-server-9.4.0.M0.jar jetty-h
- ttp-9.4.0.M0.jar jetty-util-9.4.0.M0.jar jetty-io-9.4.0.M0.jar jetty-
- webapp-9.4.0.M0.jar jetty-xml-9.4.0.M0.jar jetty-servlet-9.4.0.M0.jar
-  jetty-security-9.4.0.M0.jar jetty-jmx-9.4.0.M0.jar jetty-deploy-9.4.
- 0.M0.jar jetty-runner-9.4.0.M0.jar jetty-plus-9.4.0.M0.jar jetty-jndi
- -9.4.0.M0.jar jetty-annotations-9.4.0.M0.jar asm-5.0.1.jar asm-common
- s-5.0.1.jar asm-tree-5.0.1.jar jetty-jaas-9.4.0.M0.jar websocket-serv
- er-9.4.0.M0.jar websocket-common-9.4.0.M0.jar websocket-api-9.4.0.M0.
- jar websocket-client-9.4.0.M0.jar websocket-servlet-9.4.0.M0.jar apac
- he-jsp-9.4.0.M0.jar jetty-schemas-3.1.jar apache-jsp-8.0.33.jar apach
- e-el-8.0.33.jar ecj-4.4.2.jar apache-jstl-9.4.0.M0.jar taglibs-standa
- rd-spec-1.2.5.jar taglibs-standard-impl-1.2.5.jar jetty-runner-core-3
- .6.0.jar jetty-runner-config-3.6.0.jar tomcat-dbcp-7.0.65.jar tomcat-
- jdbc-7.0.65.jar tomcat-juli-7.0.65.jar
+ mons-lang-4.10.0.jar commons-beanutils-1.9.2.jar commons-collections-
+ 3.2.1.jar commons-collections4-4.1.jar commons-io-2.4.jar velocity-1.
+ 7.jar commons-lang-2.4.jar commons-codec-1.10.jar joda-time-2.7.jar s
+ illy-collections-4.9.0.jar lombok-1.16.10.jar slf4j-log4j12-1.6.4.jar
+  slf4j-api-1.6.4.jar log4j-1.2.16.jar xml-extensions-4.10.0.jar xerce
+ sImpl-2.11.0.jar xmlbeans-2.6.0.jar stax-api-1.0.1.jar jettison-1.3.7
+ .jar xstream-1.4.8.jar xmlpull-1.1.3.1.jar xpp3_min-1.1.4c.jar jackso
+ n-databind-2.7.5.jar jackson-annotations-2.7.0.jar jackson-core-2.7.5
+ .jar file-worker-4.10.0.jar poi-3.13.jar poi-ooxml-3.13.jar poi-ooxml
+ -schemas-3.13.jar zip4j-1.3.2.jar dozer-5.5.1.jar commons-lang3-3.4.j
+ ar jcl-over-slf4j-1.7.5.jar javax.ws.rs-api-2.0.1.jar phone-data-mana
+ gement-system-domain.jar phone-data-management-system-entities.jar sp
+ ring-context-4.1.5.RELEASE.jar spring-aop-4.1.5.RELEASE.jar aopallian
+ ce-1.0.jar spring-expression-4.1.5.RELEASE.jar phone-data-management-
+ system-business.jar business-api-3.14.0.jar resourcebundle-inspector-
+ 2.8.0.jar test-objects-4.10.0.jar nv-i18n-1.11.jar javax.servlet-api-
+ 3.1.0.jar spring-web-4.1.5.RELEASE.jar cxf-rt-frontend-jaxrs-3.1.6.ja
+ r cxf-core-3.1.6.jar woodstox-core-asl-4.4.1.jar stax2-api-3.1.4.jar 
+ xmlschema-core-2.2.1.jar javax.annotation-api-1.2.jar cxf-rt-transpor
+ ts-http-3.1.6.jar jackson-jaxrs-json-provider-2.7.5.jar jackson-jaxrs
+ -base-2.7.5.jar jackson-module-jaxb-annotations-2.7.5.jar hibernate-e
+ ntitymanager-4.3.8.Final.jar hibernate-ehcache-4.3.8.Final.jar ehcach
+ e-core-2.4.3.jar hibernate-validator-5.1.3.Final.jar validation-api-1
+ .1.0.Final.jar classmate-1.0.0.jar cglib-2.2.2.jar asm-3.3.1.jar post
+ gresql-9.2-1003-jdbc4.jar h2-1.4.190.jar jetty-server-9.4.0.M0.jar je
+ tty-http-9.4.0.M0.jar jetty-util-9.4.0.M0.jar jetty-io-9.4.0.M0.jar j
+ etty-webapp-9.4.0.M0.jar jetty-xml-9.4.0.M0.jar jetty-servlet-9.4.0.M
+ 0.jar jetty-security-9.4.0.M0.jar jetty-jmx-9.4.0.M0.jar jetty-deploy
+ -9.4.0.M0.jar jetty-runner-9.4.0.M0.jar jetty-plus-9.4.0.M0.jar jetty
+ -jndi-9.4.0.M0.jar jetty-annotations-9.4.0.M0.jar asm-5.0.1.jar asm-c
+ ommons-5.0.1.jar asm-tree-5.0.1.jar jetty-jaas-9.4.0.M0.jar websocket
+ -server-9.4.0.M0.jar websocket-common-9.4.0.M0.jar websocket-api-9.4.
+ 0.M0.jar websocket-client-9.4.0.M0.jar websocket-servlet-9.4.0.M0.jar
+  apache-jsp-9.4.0.M0.jar jetty-schemas-3.1.jar apache-jsp-8.0.33.jar 
+ apache-el-8.0.33.jar ecj-4.4.2.jar apache-jstl-9.4.0.M0.jar taglibs-s
+ tandard-spec-1.2.5.jar taglibs-standard-impl-1.2.5.jar jetty-runner-c
+ ore-3.6.0.jar jetty-runner-config-3.6.0.jar tomcat-dbcp-7.0.65.jar to
+ mcat-jdbc-7.0.65.jar tomcat-juli-7.0.65.jar
 
