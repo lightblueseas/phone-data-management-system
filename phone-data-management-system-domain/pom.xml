@@ -4,7 +4,7 @@
   <parent>
     <groupId>de.alpharogroup</groupId>
     <artifactId>phone-data-management-system</artifactId>
-    <version>3.6.0</version>
+    <version>3.9.0</version>
   </parent>
 
   <artifactId>phone-data-management-system-domain</artifactId>
