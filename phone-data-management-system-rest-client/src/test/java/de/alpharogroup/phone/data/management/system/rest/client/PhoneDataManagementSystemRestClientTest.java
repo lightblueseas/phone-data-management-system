@@ -21,6 +21,16 @@ public class PhoneDataManagementSystemRestClientTest
 	/** The SlotScoresResource. */
 	private SlotScoresResource slotScoresResource;
 
+	private String baseUrl;
+
+	private String basePath;
+
+	private String actionParameterPrefix;
+
+	private String phoneNumberParameterPrefix;
+
+	private String scoreParameterPrefix;
+
 	/**
 	 * Sets the up method.
 	 *
@@ -30,9 +40,16 @@ public class PhoneDataManagementSystemRestClientTest
 	@BeforeMethod
 	public void setUpMethod() throws Exception
 	{
+		if(baseUrl == null) {
+			baseUrl = "http://localhost:11080";
+			basePath = "/SlotGame";
+			actionParameterPrefix = "action=";
+			phoneNumberParameterPrefix = "pn=";
+			scoreParameterPrefix = "score=";
+		}
 		if (restClient == null)
 		{
-			restClient = new PhoneDataManagementSystemRestClient("http://localhost:11080");
+			restClient = new PhoneDataManagementSystemRestClient(baseUrl);
 			slotScoresResource = restClient.getSlotScoresResource();
 			AssertJUnit.assertNotNull(slotScoresResource);
 		}
@@ -52,8 +69,42 @@ public class PhoneDataManagementSystemRestClientTest
 	@Test(enabled=true)
 	public void testGetSlotScoresResource() throws IOException
 	{
-        // Connect to servlet
-			final URL url = new URL("http://localhost:11080/SlotGame?action=GetScore&pn=%2B49174/1763646");
+        // Connect to rest-api
+		String getScoreUrl = baseUrl 
+				+ basePath
+				+ "?"
+				+ actionParameterPrefix
+				+ SlotScoresResource.GET_SCORE_ACTION
+				+ "&"
+				+ phoneNumberParameterPrefix
+				+ "%2B49174/1763646";
+			final URL url = new URL(getScoreUrl);
+			final URLConnection connection = url.openConnection();
+			final InputStream is = connection.getInputStream();
+			final byte[] buffer = new byte[100];
+			final int length = is.read(buffer);
+			final String score = new String(buffer, 0, length);
+			System.out.println(score);
+	}
+	
+
+	@Test(enabled=true)
+	public void testUpdateSlotScoresResource() throws IOException
+	{
+        // Connect to rest-api
+		//http://localhost:11080/SlotGame?action=UpdateScore&pn=%2B49174/1763646&score=5555
+		String updateScoreUrl = baseUrl 
+				+ basePath
+				+ "?"
+				+ actionParameterPrefix
+				+ SlotScoresResource.UPDATE_SCORE_ACTION
+				+ "&"
+				+ phoneNumberParameterPrefix
+				+ "%2B49174/1763646"
+				+ "&"
+				+ scoreParameterPrefix
+				+ "5555";
+			final URL url = new URL(updateScoreUrl);
 			final URLConnection connection = url.openConnection();
 			final InputStream is = connection.getInputStream();
 			final byte[] buffer = new byte[100];
