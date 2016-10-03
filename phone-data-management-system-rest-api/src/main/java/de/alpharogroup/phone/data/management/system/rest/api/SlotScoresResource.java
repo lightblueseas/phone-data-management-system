@@ -23,6 +23,10 @@ import de.alpharogroup.service.rs.RestfulResource;
 public interface SlotScoresResource extends RestfulResource<Integer, SlotScore>
 {
 
+	public static final String UPDATE_SCORE_ACTION = "UpdateScore";
+
+	public static final String GET_SCORE_ACTION = "GetScore";
+	
     /**
      * Find the {@link SlotScore} from the given phone number.
      *

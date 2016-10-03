@@ -14,9 +14,6 @@ public class SlotScoresRestResource
 		AbstractRestfulResource<Integer, SlotScore, SlotScoreService>
 	implements SlotScoresResource
 {
-	private static final String UPDATE_SCORE_ACTION = "UpdateScore";
-
-	private static final String GET_SCORE_ACTION = "GetScore";
 
 	@Override
 	public Response find(final String phoneNumber)
@@ -63,9 +60,11 @@ public class SlotScoresRestResource
 				slotScore = SlotScore.builder().phoneNumber(phoneNumber).score(1000).build();
 			}
 			// Save SlotCore object...
-			slotScore = domainService.create(slotScore);
+			domainService.update(slotScore);
 		}
-		return Integer.toString(slotScore.getScore());
+		Integer ns = slotScore.getScore();
+		String newScore = Integer.toString(ns);
+		return newScore;
 	}
 
 }
