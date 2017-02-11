@@ -29,6 +29,10 @@ public class SlotScores extends BaseEntity<Integer> implements Cloneable
 	/** The phone number. */
 	@Column(length = 255)
 	private String phoneNumber;
+	
+	/** The phone number. */
+	@Column(length = 255)
+	private String applicationName;
 
 	/** The score. */
 	@Column(name = "score")
