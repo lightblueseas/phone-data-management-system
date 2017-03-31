@@ -41,7 +41,7 @@ public class PhoneDataManagementSystemRestClient extends AbstractRestClient {
 	 * default base url.
 	 */
 	public PhoneDataManagementSystemRestClient() {
-		this(DEFAULT_BASE_URL);
+		this(DEFAULT_BASE_HTTPS_URL);
 	}
 
 	/**
