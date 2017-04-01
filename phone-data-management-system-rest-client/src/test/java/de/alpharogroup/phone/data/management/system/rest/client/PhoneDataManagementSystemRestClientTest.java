@@ -86,7 +86,7 @@ public class PhoneDataManagementSystemRestClientTest {
 	public void tearDownMethod() throws Exception {
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void testGetSlotScoresResource() throws IOException {
 		// Connect to rest-api
 		String getScoreUrl = baseUrl + basePath + "?" + actionParameterPrefix + SlotScoresResource.GET_SCORE_ACTION
@@ -100,7 +100,7 @@ public class PhoneDataManagementSystemRestClientTest {
 		System.out.println(score);
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void testUpdateSlotScoresResource() throws IOException {
 		// Connect to rest-api
 		// http://localhost:11080/SlotGame?action=UpdateScore&pn=%2B49174/1763646&score=5555
