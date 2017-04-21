@@ -36,7 +36,8 @@ import org.testng.annotations.Test;
 
 import de.alpharogroup.phone.data.management.system.rest.api.SlotScoresResource;
 
-public class PhoneDataManagementSystemRestClientTest {
+public class PhoneDataManagementSystemRestClientTest
+{
 
 	/** The rest client. */
 	private PhoneDataManagementSystemRestClient restClient;
@@ -61,15 +62,18 @@ public class PhoneDataManagementSystemRestClientTest {
 	 *             the exception
 	 */
 	@BeforeMethod
-	public void setUpMethod() throws Exception {
-		if (baseUrl == null) {
+	public void setUpMethod() throws Exception
+	{
+		if (baseUrl == null)
+		{
 			baseUrl = "http://localhost:11080";
 			basePath = "/SlotGame";
 			actionParameterPrefix = "action=";
 			phoneNumberParameterPrefix = "pn=";
 			scoreParameterPrefix = "score=";
 		}
-		if (restClient == null) {
+		if (restClient == null)
+		{
 			restClient = new PhoneDataManagementSystemRestClient(baseUrl);
 			slotScoresResource = restClient.getSlotScoresResource();
 			AssertJUnit.assertNotNull(slotScoresResource);
@@ -83,14 +87,17 @@ public class PhoneDataManagementSystemRestClientTest {
 	 *             the exception
 	 */
 	@AfterMethod
-	public void tearDownMethod() throws Exception {
+	public void tearDownMethod() throws Exception
+	{
 	}
 
 	@Test(enabled = false)
-	public void testGetSlotScoresResource() throws IOException {
+	public void testGetSlotScoresResource() throws IOException
+	{
 		// Connect to rest-api
-		String getScoreUrl = baseUrl + basePath + "?" + actionParameterPrefix + SlotScoresResource.GET_SCORE_ACTION
-				+ "&" + phoneNumberParameterPrefix + "%2B49174/1763646";
+		String getScoreUrl = baseUrl + basePath + "?" + actionParameterPrefix
+			+ SlotScoresResource.GET_SCORE_ACTION + "&" + phoneNumberParameterPrefix
+			+ "%2B49174/1763646";
 		final URL url = new URL(getScoreUrl);
 		final URLConnection connection = url.openConnection();
 		final InputStream is = connection.getInputStream();
@@ -101,12 +108,13 @@ public class PhoneDataManagementSystemRestClientTest {
 	}
 
 	@Test(enabled = false)
-	public void testUpdateSlotScoresResource() throws IOException {
+	public void testUpdateSlotScoresResource() throws IOException
+	{
 		// Connect to rest-api
 		// http://localhost:11080/SlotGame?action=UpdateScore&pn=%2B49174/1763646&score=5555
 		String updateScoreUrl = baseUrl + basePath + "?" + actionParameterPrefix
-				+ SlotScoresResource.UPDATE_SCORE_ACTION + "&" + phoneNumberParameterPrefix + "%2B49174/1763646" + "&"
-				+ scoreParameterPrefix + "5555";
+			+ SlotScoresResource.UPDATE_SCORE_ACTION + "&" + phoneNumberParameterPrefix
+			+ "%2B49174/1763646" + "&" + scoreParameterPrefix + "5555";
 		final URL url = new URL(updateScoreUrl);
 		final URLConnection connection = url.openConnection();
 		final InputStream is = connection.getInputStream();

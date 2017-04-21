@@ -28,7 +28,8 @@ import de.alpharogroup.cxf.rest.client.AbstractRestClient;
 import de.alpharogroup.phone.data.management.system.rest.api.SlotScoresResource;
 import lombok.Getter;
 
-public class PhoneDataManagementSystemRestClient extends AbstractRestClient {
+public class PhoneDataManagementSystemRestClient extends AbstractRestClient
+{
 
 	/**
 	 * The {@link SlotScoresResource}.
@@ -37,21 +38,21 @@ public class PhoneDataManagementSystemRestClient extends AbstractRestClient {
 	private final SlotScoresResource slotScoresResource;
 
 	/**
-	 * Instantiates a new {@link PhoneDataManagementSystemRestClient} with the
-	 * default base url.
+	 * Instantiates a new {@link PhoneDataManagementSystemRestClient} with the default base url.
 	 */
-	public PhoneDataManagementSystemRestClient() {
+	public PhoneDataManagementSystemRestClient()
+	{
 		this(DEFAULT_BASE_HTTPS_URL);
 	}
 
 	/**
-	 * Instantiates a new {@link PhoneDataManagementSystemRestClient} with the
-	 * given base url.
+	 * Instantiates a new {@link PhoneDataManagementSystemRestClient} with the given base url.
 	 *
 	 * @param baseUrl
 	 *            the base url
 	 */
-	public PhoneDataManagementSystemRestClient(final String baseUrl) {
+	public PhoneDataManagementSystemRestClient(final String baseUrl)
+	{
 		super(baseUrl);
 		slotScoresResource = newResource(SlotScoresResource.class);
 	}

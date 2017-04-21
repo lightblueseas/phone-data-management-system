@@ -35,7 +35,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Repository("slotScoresDao")
-public class SlotScoresDao extends JpaEntityManagerDao<SlotScores, Integer> {
+public class SlotScoresDao extends JpaEntityManagerDao<SlotScores, Integer>
+{
 	/**
 	 * The serialVersionUID.
 	 */

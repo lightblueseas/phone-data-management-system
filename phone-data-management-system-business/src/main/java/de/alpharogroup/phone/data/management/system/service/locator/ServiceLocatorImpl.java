@@ -36,7 +36,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Service("serviceLocator")
-public class ServiceLocatorImpl implements ServiceLocator {
+public class ServiceLocatorImpl implements ServiceLocator
+{
 	@Autowired
 	private SlotScoresService slotScoresService;
 }

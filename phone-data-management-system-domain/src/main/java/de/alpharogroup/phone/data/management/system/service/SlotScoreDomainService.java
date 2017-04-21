@@ -43,8 +43,11 @@ import lombok.Setter;
 @Transactional
 @Service("slotScoreDomainService")
 public class SlotScoreDomainService
-		extends AbstractDomainService<Integer, SlotScore, SlotScores, SlotScoresDao, SlotScoresMapper>
-		implements SlotScoreService {
+	extends
+		AbstractDomainService<Integer, SlotScore, SlotScores, SlotScoresDao, SlotScoresMapper>
+	implements
+		SlotScoreService
+{
 
 	/** The {@link SlotScoresService}. */
 	@Autowired
@@ -54,21 +57,25 @@ public class SlotScoreDomainService
 
 	@Transactional
 	@Override
-	public SlotScore create(final SlotScore domainObject) {
+	public SlotScore create(final SlotScore domainObject)
+	{
 		return super.create(domainObject);
 	}
 
 	@Override
-	public SlotScore find(final String phoneNumber) {
+	public SlotScore find(final String phoneNumber)
+	{
 		final SlotScores slotScores = slotScoresService.find(phoneNumber);
 		final SlotScore slotScore = getMapper().toDomainObject(slotScores);
 		return slotScore;
 	}
 
 	@Override
-	public List<SlotScore> find(final String phoneNumber, final Integer score) {
+	public List<SlotScore> find(final String phoneNumber, final Integer score)
+	{
 		final List<SlotScores> slotScoresEntities = slotScoresService.find(phoneNumber, score);
-		final List<SlotScore> slotScoreDomainObjects = getMapper().toDomainObjects(slotScoresEntities);
+		final List<SlotScore> slotScoreDomainObjects = getMapper()
+			.toDomainObjects(slotScoresEntities);
 		return slotScoreDomainObjects;
 	}
 
@@ -79,7 +86,8 @@ public class SlotScoreDomainService
 	 *            the new {@link SlotScoresDao}.
 	 */
 	@Autowired
-	public void setSlotScoresDao(final SlotScoresDao slotScoresDao) {
+	public void setSlotScoresDao(final SlotScoresDao slotScoresDao)
+	{
 		setDao(slotScoresDao);
 	}
 
@@ -90,7 +98,8 @@ public class SlotScoreDomainService
 	 *            the new {@link SlotScoresMapper}.
 	 */
 	@Autowired
-	public void setSlotScoresMapper(final SlotScoresMapper slotScoresMapper) {
+	public void setSlotScoresMapper(final SlotScoresMapper slotScoresMapper)
+	{
 		setMapper(slotScoresMapper);
 	}
 

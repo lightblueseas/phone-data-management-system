@@ -39,13 +39,13 @@ import de.alpharogroup.phone.data.management.system.domain.SlotScore;
 import de.alpharogroup.service.rs.RestfulResource;
 
 /**
- * The interface {@link SlotScoresResource} provides methods for resolving slot
- * scores.
+ * The interface {@link SlotScoresResource} provides methods for resolving slot scores.
  */
 @Path("/SlotGame")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public interface SlotScoresResource extends RestfulResource<Integer, SlotScore> {
+public interface SlotScoresResource extends RestfulResource<Integer, SlotScore>
+{
 
 	public static final String UPDATE_SCORE_ACTION = "UpdateScore";
 
@@ -73,7 +73,8 @@ public interface SlotScoresResource extends RestfulResource<Integer, SlotScore> 
 	 */
 	@GET
 	@Path("/get/{phoneNumber}/{score}")
-	List<SlotScore> find(@PathParam("phoneNumber") final String phoneNumber, @PathParam("score") final Integer score);
+	List<SlotScore> find(@PathParam("phoneNumber") final String phoneNumber,
+		@PathParam("score") final Integer score);
 
 	/**
 	 * Gets the score from the given phone number.
@@ -89,5 +90,5 @@ public interface SlotScoresResource extends RestfulResource<Integer, SlotScore> 
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	String getScore(@QueryParam("action") String action, @QueryParam("pn") final String phoneNumber,
-			@QueryParam("score") final String score);
+		@QueryParam("score") final String score);
 }

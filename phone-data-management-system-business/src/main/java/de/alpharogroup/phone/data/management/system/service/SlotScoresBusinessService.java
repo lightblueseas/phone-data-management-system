@@ -41,8 +41,12 @@ import de.alpharogroup.phone.data.management.system.service.util.HqlStringCreato
 
 @Transactional
 @Service("slotScoresService")
-public class SlotScoresBusinessService extends AbstractBusinessService<SlotScores, Integer, SlotScoresDao>
-		implements SlotScoresService {
+public class SlotScoresBusinessService
+	extends
+		AbstractBusinessService<SlotScores, Integer, SlotScoresDao>
+	implements
+		SlotScoresService
+{
 	/**
 	 *
 	 */
@@ -50,20 +54,24 @@ public class SlotScoresBusinessService extends AbstractBusinessService<SlotScore
 
 	@Override
 	@Transactional
-	public SlotScores find(final String phoneNumber) {
+	public SlotScores find(final String phoneNumber)
+	{
 		final List<SlotScores> slotScores = find(phoneNumber, null);
 		return ListExtensions.getFirst(slotScores);
 	}
 
 	@Override
 	@SuppressWarnings("unchecked")
-	public List<SlotScores> find(final String phoneNumber, final Integer score) {
+	public List<SlotScores> find(final String phoneNumber, final Integer score)
+	{
 		final String hqlString = HqlStringCreator.forSlotScore(phoneNumber, score);
 		final Query query = getQuery(hqlString);
-		if ((phoneNumber != null) && !phoneNumber.isEmpty()) {
+		if ((phoneNumber != null) && !phoneNumber.isEmpty())
+		{
 			query.setParameter("phoneNumber", phoneNumber);
 		}
-		if (score != null) {
+		if (score != null)
+		{
 			query.setParameter("score", score);
 		}
 		final List<SlotScores> images = query.getResultList();
@@ -71,7 +79,8 @@ public class SlotScoresBusinessService extends AbstractBusinessService<SlotScore
 	}
 
 	@Autowired
-	public void setProfileRatingsDao(final SlotScoresDao slotScoreDao) {
+	public void setProfileRatingsDao(final SlotScoresDao slotScoreDao)
+	{
 		setDao(slotScoreDao);
 	}
 }

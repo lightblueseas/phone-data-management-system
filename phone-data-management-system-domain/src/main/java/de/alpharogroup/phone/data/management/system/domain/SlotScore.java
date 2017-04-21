@@ -40,7 +40,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class SlotScore extends BaseDomainObject<Integer> {
+public class SlotScore extends BaseDomainObject<Integer>
+{
 
 	/** The serial Version UID. */
 	private static final long serialVersionUID = 1L;
