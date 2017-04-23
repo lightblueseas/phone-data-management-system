@@ -4,11 +4,17 @@ Parent project that holds module projects for the persistence of phone data.
 
 The project holds backend data for phone data.
 
+# ERD-Diagramm
+
+The erd-diagramm for this database looks as follows: ![erd-diagramm]()
+
+This erd-diagramm was created with [Jeddict plugin from netbeans as JPA Modeler](http://plugins.netbeans.org/plugin/53057/jpa-modeler)  and [Jeddict](https://jeddict.github.io/)
+
 ## License
 
 The source code comes under the liberal MIT License.
 
-# Build status and latest maven version
+# Build status
 [![Build Status](https://travis-ci.org/lightblueseas/phone-data-management-system.svg?branch=master)](https://travis-ci.org/lightblueseas/phone-data-management-system)
 
 ## Maven Central
@@ -121,6 +127,9 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 			</dependency>
 			...
 		</dependencies>
+		 
+## Open Issues
+[![Open Issues](https://img.shields.io/github/issues/astrapi69/phone-data-management-system.svg?style=flat)](https://github.com/astrapi69/phone-data-management-system/issues) 
 
 ## Want to Help and improve it? ###
 

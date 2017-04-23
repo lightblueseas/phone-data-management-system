@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" pkg="de.alpharogroup.phone.data.management.system.entities" v="1.5.4" xs="false" id="_14929506132471489" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:mapped-superclass xre="false" access="FIELD" sm="false" abs="true" class="BaseEntity" visibile="true" minimized="false" rootElement="_14929506132471489" id="_14929506132691494">
+        <jpa:attributes>
+            <jpa:id attribute-type="PK" visibile="true" name="id" id="_14929506132691495">
+                <jpa:column name="id" unique="false" nullable="false" insertable="true" updatable="true"/>
+                <jpa:generated-value strategy="AUTO"/>
+                <jpa:sequence-generator name="id"/>
+            </jpa:id>
+        </jpa:attributes>
+    </jpa:mapped-superclass>
+    <jpa:entity xre="false" sm="false" abs="false" class="SlotScores" superclassId="_14929506132691494" visibile="true" minimized="false" rootElement="_14929506132471489" id="_14929506132691490">
+        <inf>java.lang.Cloneable</inf>
+        <annotation n="@lombok.Getter"/>
+        <annotation n="@lombok.Setter"/>
+        <annotation n="@lombok.NoArgsConstructor"/>
+        <jpa:attributes>
+            <basic attribute-type="String" visibile="true" name="phoneNumber" id="_14929506132691491"/>
+            <basic attribute-type="String" visibile="true" name="applicationName" id="_14929506132691492"/>
+            <basic attribute-type="Integer" visibile="true" name="score" id="_14929506132691493">
+                <jpa:column name="score" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </basic>
+        </jpa:attributes>
+        <jpa:table name="slot_score"/>
+    </jpa:entity>
+    <jpa:diagram>
+        <plane elementRef="_14929506132471489">
+            <shape elementRef="_14929506132691490">
+                <Bounds x="268.0" y="150.0" width="172.0" height="95.0"/>
+            </shape>
+            <shape elementRef="_14929506132691494">
+                <Bounds x="268.0" y="33.0" width="172.0" height="54.0"/>
+            </shape>
+        </plane>
+    </jpa:diagram>
+</jpa:entity-mappings>
