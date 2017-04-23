@@ -1,4 +1,4 @@
-# phone-data-management-system
+# Overview
 
 Parent project that holds module projects for the persistence of phone data.
 
@@ -6,7 +6,7 @@ The project holds backend data for phone data.
 
 # ERD-Diagramm
 
-The erd-diagramm for this database looks as follows: ![erd-diagramm]()
+The erd-diagramm for this database looks as follows: ![erd-diagramm](https://raw.githubusercontent.com/lightblueseas/phone-data-management-system/develop/phone-data-management-system-init/src/main/resources/erd/erd-diagramm-phone-data-management-system.jpa.png)
 
 This erd-diagramm was created with [Jeddict plugin from netbeans as JPA Modeler](http://plugins.netbeans.org/plugin/53057/jpa-modeler)  and [Jeddict](https://jeddict.github.io/)
 
